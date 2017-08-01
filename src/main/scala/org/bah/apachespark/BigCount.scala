@@ -1,11 +1,12 @@
 package org.bah.apachespark
+
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
 
 object BigCount {
   def main(args:Array[String])={
     //Set Conf and Context for Spark
-    val conf = new SparkConf().setAppName("WordCount").setMaster("local")
+    val conf = new SparkConf().setMaster("local").setAppName("WordCount")
     val sc = new SparkContext(conf)
     
     //Pull Lines from Big.txt
